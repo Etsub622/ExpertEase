@@ -1,3 +1,4 @@
+import 'package:expertease/core/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,6 +13,7 @@ class PostItem extends StatefulWidget {
 
 class _PostItemState extends State<PostItem> {
   bool _isExpanded = false;
+  bool isIconSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +21,12 @@ class _PostItemState extends State<PostItem> {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Card(
         elevation: 2,
+        color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -37,18 +40,36 @@ class _PostItemState extends State<PostItem> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        widget.post['userName']!,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14.sp,
-                        ),
+                      Row(
+                        children: [
+                          Text(
+                            widget.post['userName']!,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15.sp,
+                              color: ThemeColors.primary,
+                            ),
+                          ),
+                          SizedBox(width: 7.w),
+                          Container(
+                              height: 28.h,
+                              width: 1.3.w,
+                              color: Colors.black87),
+                          SizedBox(width: 7.w),
+                          Text(
+                            widget.post['jobTitle']!,
+                            style: TextStyle(
+                              fontSize: 12.sp,
+                              color: ThemeColors.primary,
+                            ),
+                          ),
+                        ],
                       ),
                       Text(
-                        widget.post['jobTitle']!,
+                        widget.post['createdTime']!,
                         style: TextStyle(
                           fontSize: 12.sp,
-                          color: Colors.grey,
+                          color: ThemeColors.primary,
                         ),
                       ),
                     ],
@@ -64,7 +85,7 @@ class _PostItemState extends State<PostItem> {
                 },
                 child: Text(
                   widget.post['content']!,
-                  style: TextStyle(fontSize: 14.sp),
+                  style: TextStyle(fontSize: 12.sp),
                   maxLines: _isExpanded ? null : 3,
                   overflow: _isExpanded
                       ? TextOverflow.visible
@@ -86,14 +107,25 @@ class _PostItemState extends State<PostItem> {
                   ),
                 ),
               SizedBox(height: 10.h),
-              Image.asset(widget.post['postImage']!),
+              Image.asset(
+                widget.post['postImage']!,
+                fit: BoxFit.cover,
+                width: double.infinity,
+              ),
               SizedBox(height: 10.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.thumb_up_off_alt, color: Colors.grey),
-                    onPressed: () {},
+                    icon: Icon(
+                      Icons.thumb_up_off_alt,
+                      color: isIconSelected ? Colors.red : Colors.grey,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        isIconSelected = !isIconSelected;
+                      });
+                    },
                   ),
                   IconButton(
                     icon: Icon(Icons.comment, color: Colors.grey),

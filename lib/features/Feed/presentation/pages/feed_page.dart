@@ -1,5 +1,7 @@
 import 'package:expertease/core/colors/colors.dart';
 import 'package:expertease/core/dummy_datas/dummy_feed.dart';
+import 'package:expertease/features/Feed/presentation/pages/new_post.dart';
+import 'package:expertease/features/Feed/presentation/widget/bottom_bar.dart';
 import 'package:expertease/features/Feed/presentation/widget/post_item.dart';
 import 'package:expertease/features/Feed/presentation/widget/search.dart';
 import 'package:flutter/material.dart';
@@ -33,8 +35,8 @@ class _FeedPageState extends State<FeedPage> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(44.w),
                     child: Image.asset(
-                      "assets/images/logo.jpg", 
-                      width: 40.w, 
+                      "assets/images/logo.jpg",
+                      width: 40.w,
                       height: 40.h,
                     ),
                   ),
@@ -93,8 +95,13 @@ class _FeedPageState extends State<FeedPage> {
               height: 15.h,
             ),
             SearchBox(
-              hintText: "Write what you want here...",
-            ),
+                hintText: "Write what you want here...",
+                ontap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return NewPost();
+                  }));
+                }),
             SizedBox(
               height: 15.h,
             ),
@@ -109,6 +116,7 @@ class _FeedPageState extends State<FeedPage> {
           ],
         ),
       ),
+      bottomNavigationBar: CustomNavigationBar(),
     );
   }
 }
