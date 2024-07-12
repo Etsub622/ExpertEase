@@ -4,8 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchBox extends StatelessWidget {
   final String hintText;
+  final void Function() ontap;
 
-  SearchBox({super.key, required this.hintText});
+  SearchBox({
+    super.key,
+    required this.hintText,
+    required this.ontap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +29,15 @@ class SearchBox extends StatelessWidget {
         child: TextField(
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: TextStyle(color: Color.fromARGB(255, 138, 175, 210)),
+            hintStyle: TextStyle(color: Color.fromARGB(255, 146, 181, 213)),
             border: InputBorder.none,
-            suffixIcon: Icon(
-              Icons.add,
-              size: 30,
-              color: ThemeColors.primary,
+            suffixIcon: GestureDetector(
+              onTap: ontap,
+              child: Icon(
+                Icons.add,
+                size: 30,
+                color: ThemeColors.primary,
+              ),
             ),
           ),
         ),
