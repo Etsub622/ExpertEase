@@ -26,6 +26,7 @@ class CustomToggleButton extends StatelessWidget {
                   'Upcoming',
                   style: TextStyle(
                     fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
                     color:
                         isSelected[0] ? ThemeColors.buttonColor : Colors.black,
                   ),
@@ -47,6 +48,7 @@ class CustomToggleButton extends StatelessWidget {
                   'Cancelled',
                   style: TextStyle(
                     fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
                     color:
                         isSelected[1] ? ThemeColors.buttonColor : Colors.black,
                   ),
