@@ -3,6 +3,6 @@ import 'package:flutter/material.dart';
 
 class ThemeColors {
   static const Color primary = Color(0xff5C95CA);
-  static const Color yellowSecondary = Color(0xffFFC107);
+  static const Color yellowSecondary = Color(0xffFFD899);
   static const Color buttonColor = Color(0xff146D95);
 }
