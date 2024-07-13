@@ -1,6 +1,8 @@
 import 'package:expertease/core/colors/colors.dart';
 import 'package:expertease/core/routes/path.dart';
 import 'package:expertease/features/Feed/presentation/pages/feed_page.dart';
+import 'package:expertease/features/appointment_display/presentation/pages/appointment_screen.dart';
+import 'package:expertease/features/appointment_display/presentation/pages/upcoming.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -26,7 +28,9 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
 
         break;
       case 1:
-        context.go(AppPath.profile);
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: ((context) => FeedPage())));
+
         break;
       case 2:
         context.go(AppPath.appointment);
@@ -35,7 +39,9 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         context.go(AppPath.home);
         break;
       case 4:
-        context.go(AppPath.profile);
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: ((context) => AppointmentPage())));
+
         break;
     }
   }

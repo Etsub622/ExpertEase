@@ -100,7 +100,7 @@ class _NewPostState extends State<NewPost> {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: ThemeColors.buttonColor,
+                  backgroundColor: ThemeColors.primary,
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5),

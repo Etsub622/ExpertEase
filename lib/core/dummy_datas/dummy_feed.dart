@@ -26,3 +26,57 @@ final List<Map<String, String>> posts = [
     'postImage': 'assets/images/feed1.png',
   },
 ];
+
+final List<Map<String, dynamic>> appointments = [
+  {
+    'userName': 'Heran Eshetu',
+    'jobTitle': 'Psychologist',
+    'profileImage': 'assets/images/logo.jpg',
+    'appointmentTime': '10:00 AM',
+    'appointmentDate': 'July 15,2024',
+    'rating': '5',
+  },
+  {
+    'userName': 'Jane Smith',
+    'jobTitle': 'Product Manager',
+    'profileImage': 'assets/images/feed1.png',
+    'appointmentTime': '10:00 AM',
+    'appointmentDate': 'July 15,2024',
+    'rating': '4.5',
+  },
+  {
+    'userName': 'Jane Smith',
+    'jobTitle': 'Lawyer',
+    'profileImage': 'assets/images/feed1.png',
+    'appointmentTime': '10:00 AM',
+    'appointmentDate': 'July 15,2024',
+    'rating': '3',
+  },
+  {
+    'userName': 'Jane Smith',
+    'jobTitle': 'Lawyer',
+    'profileImage': 'assets/images/logo.jpg',
+    'appointmentTime': '10:00 AM',
+    'appointmentDate': 'July 15,2024',
+    'rating': '5',
+  },
+];
+
+final List<Map<String, dynamic>> cancelledAppointments = [
+  {
+    'userName': 'Heran Eshetu',
+    'jobTitle': 'Psychologist',
+    'profileImage': 'assets/images/logo.jpg',
+    'appointmentTime': '10:00 AM',
+    'appointmentDate': 'July 15,2024',
+    'rating': '5',
+  },
+  {
+    'userName': 'Heran Eshetu',
+    'jobTitle': 'Psychologist',
+    'profileImage': 'assets/images/logo.jpg',
+    'appointmentTime': '10:00 AM',
+    'appointmentDate': 'July 15,2024',
+    'rating': '5',
+  },
+];

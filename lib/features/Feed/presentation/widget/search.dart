@@ -24,12 +24,18 @@ class SearchBox extends StatelessWidget {
           color: ThemeColors.primary,
         ),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Center(
         child: TextField(
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: TextStyle(color: Color.fromARGB(255, 146, 181, 213)),
+            hintStyle: TextStyle(
+                color: Color.fromARGB(
+              255,
+              146,
+              181,
+              213,
+            )),
             border: InputBorder.none,
             suffixIcon: GestureDetector(
               onTap: ontap,

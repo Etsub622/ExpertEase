@@ -35,7 +35,7 @@ class _FeedPageState extends State<FeedPage> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(44.w),
                     child: Image.asset(
-                      "assets/images/logo.jpg",
+                      "assets/images/onboarding1.png",
                       width: 40.w,
                       height: 40.h,
                     ),
@@ -56,36 +56,28 @@ class _FeedPageState extends State<FeedPage> {
                 Container(
                   alignment: Alignment.center,
                   height: 40.h,
-                  width: 40.w,
+                  width: 35.w,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(44.w),
-                    color: Colors.blue,
+                    color: const Color.fromARGB(255, 217, 223, 228),
                   ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(44.w),
-                    child: Image.asset(
-                      "assets/images/logo.jpg",
-                      width: 40.w,
-                      height: 40.h,
-                    ),
+                  child: Icon(
+                    Icons.chat,
+                    color: ThemeColors.primary,
                   ),
                 ),
                 SizedBox(width: 10.w),
                 Container(
                   alignment: Alignment.center,
                   height: 40.h,
-                  width: 40.w,
+                  width: 30.w,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(44.w),
-                    color: Colors.blue,
+                    color: const Color.fromARGB(255, 217, 223, 228),
                   ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(44.w),
-                    child: Image.asset(
-                      "assets/images/logo.jpg",
-                      width: 40.w,
-                      height: 40.h,
-                    ),
+                  child: Icon(
+                    Icons.notifications,
+                    color: ThemeColors.primary,
                   ),
                 ),
               ],
