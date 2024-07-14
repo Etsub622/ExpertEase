@@ -3,6 +3,7 @@ import 'package:expertease/core/routes/path.dart';
 import 'package:expertease/features/Feed/presentation/pages/feed_page.dart';
 import 'package:expertease/features/appointment_display/presentation/pages/appointment_screen.dart';
 import 'package:expertease/features/appointment_display/presentation/pages/upcoming.dart';
+import 'package:expertease/features/expert_display/presentation/pages/experts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -29,11 +30,12 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         break;
       case 1:
         Navigator.of(context)
-            .push(MaterialPageRoute(builder: ((context) => FeedPage())));
+            .push(MaterialPageRoute(builder: ((context) => ExpertDisplay())));
 
         break;
       case 2:
-        context.go(AppPath.appointment);
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: ((context) => ExpertDisplay())));
         break;
       case 3:
         context.go(AppPath.home);

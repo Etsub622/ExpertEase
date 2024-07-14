@@ -4,12 +4,13 @@ import 'package:expertease/features/Splash_screens/presentation/pages/onboard1.d
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard2.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard3.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard4.dart';
+import 'package:expertease/features/expert_display/presentation/pages/experts.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final GoRouter router =
-      GoRouter(initialLocation: AppPath.onboard1, routes: <GoRoute>[
+      GoRouter(initialLocation: AppPath.home, routes: <GoRoute>[
     GoRoute(
         path: AppPath.home,
         name: AppPath.home,
@@ -39,6 +40,12 @@ class AppRouter {
         name: AppPath.onboard4,
         builder: (BuildContext context, GoRouterState state) {
           return onBoardFour();
+        }),
+        GoRoute(
+        path: AppPath.expertDisplay,
+        name: AppPath.expertDisplay,
+        builder: (BuildContext context, GoRouterState state) {
+          return ExpertDisplay();
         }),
   ]);
 }
