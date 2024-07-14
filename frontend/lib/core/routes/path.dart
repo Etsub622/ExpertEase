@@ -11,4 +11,5 @@ class AppPath {
   static const onboard2 = '/onboard2';
   static const onboard3 = '/onboard3';
   static const onboard4 = '/onboard4';
+  static const expertDisplay = '/expertDisplay';
 }
