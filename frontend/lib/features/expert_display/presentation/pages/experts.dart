@@ -99,53 +99,48 @@ class _ExpertDisplayState extends State<ExpertDisplay> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        title: TextField(
+          controller: _controller,
+          onChanged: (value) => _runFilter(value),
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: Colors.white,
+            hintText: 'Search',
+            hintStyle: TextStyle(color: Colors.grey),
+            prefixIcon: Icon(Icons.search, color: Colors.grey),
+            suffixIcon: IconButton(
+              icon: Icon(Icons.close, color: Colors.grey),
+              onPressed: () {
+                setState(() {
+                  String currentText = _controller.text;
+                  if (currentText.isNotEmpty) {
+                    _controller.text =
+                        currentText.substring(0, currentText.length - 1);
+                    _controller.selection = TextSelection.fromPosition(
+                        TextPosition(offset: _controller.text.length));
+                  }
+                });
+              },
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: Colors.grey.shade400, width: 0.2),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: Colors.grey.shade400, width: 0.5),
+            ),
+            contentPadding:
+                EdgeInsets.symmetric(vertical: 10, horizontal: 3),
+          ),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const SizedBox(
-              height: 20,
-            ),
-            TextField(
-              controller: _controller,
-              onChanged: (value) => _runFilter(value),
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                hintText: 'Search',
-                hintStyle: TextStyle(color: Colors.grey),
-                prefixIcon: Icon(Icons.search, color: Colors.grey),
-                suffixIcon: IconButton(
-                  icon: Icon(Icons.close, color: Colors.grey),
-                  onPressed: () {
-                    setState(() {
-                      String currentText = _controller.text;
-                      if (currentText.isNotEmpty) {
-                        _controller.text =
-                            currentText.substring(0, currentText.length - 1);
-                        _controller.selection = TextSelection.fromPosition(
-                            TextPosition(offset: _controller.text.length));
-                      }
-                    });
-                  },
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide:
-                      BorderSide(color: Colors.grey.shade400, width: 0.2),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide:
-                      BorderSide(color: Colors.grey.shade400, width: 0.5),
-                ),
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 10, horizontal: 3),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
             Expanded(
               child: _foundUsers.isNotEmpty
                   ? ListView.builder(

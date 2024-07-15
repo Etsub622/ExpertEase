@@ -10,12 +10,12 @@ class ExpertDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: Text('Profile',style: TextStyle(color: Color.fromARGB(255, 92, 149, 202)),),
         leading: Builder(
           builder: (BuildContext context) {
             return GestureDetector(
               onTap: () {
-                context.go("/search");
+                context.go("/feed_page");
               },
               child: Icon(Icons.arrow_back, color: Color.fromARGB(255, 92, 149, 202)),
             );
@@ -31,7 +31,7 @@ class ExpertDetailPage extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.all(5),
-              padding: EdgeInsets.symmetric(vertical: 80.0, horizontal: 0.0),
+              padding: EdgeInsets.symmetric(vertical: 80.0, horizontal: 5.0),
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 92, 149, 202),
                 borderRadius: BorderRadius.circular(10),
@@ -47,15 +47,16 @@ class ExpertDetailPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   CircleAvatar(
-                    radius: 50,
+                   
+                    minRadius: 40,
                     backgroundImage: AssetImage(expert['profileImage']),
                   ),
                   Column(
                     children: [
-                      Text(expert['name'], style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
-                      Text(expert['jobTitle'], style: TextStyle(fontSize: 20, color: Colors.white)),
+                      Text(expert['name'], style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white)),
+                      Text(expert['jobTitle'], style: TextStyle(fontSize: 18, color: Colors.white)),
                       SizedBox(height: 10),
-                      Text('Fee: ${expert['price']}  Rating: ${expert['rating']}⭐', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+                      Text('Fee: ${expert['price']}  Rating: ${expert['rating']}⭐', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white)),
                     ],
                   ),
                 ],
@@ -93,20 +94,19 @@ class ExpertDetailPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             ElevatedButton(
-              onPressed: () {
-                context.push("/schedule_page", extra: expert); // Navigate to the schedule page with expert data
-              },
-              child: Text(
-                'Schedule',
-                style: TextStyle(color: Colors.white),
-              ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(
-                  Color.fromARGB(255, 92, 149, 202),
+                onPressed: () {
+                  context.go("/schedule_page");
+
+                },
+                child: Text('Schedule', style: TextStyle(color: Colors.white)),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 92, 149, 202), // Button color
+                  minimumSize: Size(150, 50), // Button size
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
-                fixedSize: MaterialStateProperty.all<Size>(Size(150, 50)),
               ),
-            ),
           ],
         ),
       ),

@@ -7,7 +7,7 @@ class ClientProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(), // Add the drawer here
+      drawer: CustomDrawer(),
       appBar: AppBar(
         title: Text(
           'Profile',
@@ -27,14 +27,14 @@ class ClientProfilePage extends StatelessWidget {
           Icon(Icons.edit, color: Color.fromARGB(255, 92, 149, 202)),
         ],
       ),
-     
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 140),
+              width: 500,
+              padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 50),
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 92, 149, 202),
                 borderRadius: BorderRadius.circular(12.0),

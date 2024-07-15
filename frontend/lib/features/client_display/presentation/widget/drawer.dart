@@ -4,7 +4,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400,
+      width: 370,
       child: Drawer(
         backgroundColor: Color.fromARGB(255, 92, 149, 202),
         child: Column(
@@ -86,6 +86,7 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 20 ,horizontal:40),
               leading: Icon(Icons.logout, color: Colors.red),
               title: Text('Log Out', style: TextStyle(color: Colors.red)),
               onTap: () {},

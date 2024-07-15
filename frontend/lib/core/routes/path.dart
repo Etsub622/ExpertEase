@@ -12,4 +12,11 @@ class AppPath {
   static const onboard3 = '/onboard3';
   static const onboard4 = '/onboard4';
   static const expertDisplay = '/expertDisplay';
+  static const feedPage = '/feed_page';
+  static const expertProfile = '/expert_profile';
+  static const expertDetail = '/expert_detail';
+  static const clientProfile = '/client_profile';
+  static const schedule = '/schedule_page';
 }
+
+

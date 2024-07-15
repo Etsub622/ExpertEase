@@ -21,7 +21,7 @@ class _SchedulePageState extends State<SchedulePage> {
           builder: (BuildContext context) {
             return GestureDetector(
               onTap: () {
-                context.go("/search");
+                context.go("/expertDisplay");
               },
               child: Icon(Icons.arrow_back, color: Color.fromARGB(255, 92, 149, 202)),
             );
