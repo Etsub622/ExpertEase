@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class ExpertDisplay extends StatefulWidget {
   const ExpertDisplay({Key? key}) : super(key: key);
@@ -149,67 +150,73 @@ class _ExpertDisplayState extends State<ExpertDisplay> {
               child: _foundUsers.isNotEmpty
                   ? ListView.builder(
                       itemCount: _foundUsers.length,
-                      itemBuilder: (context, index) => Card(
-                            key: ValueKey(_foundUsers[index]["id"]),
-                            color: Color.fromARGB(255, 237, 240, 245),
-                            elevation: 0,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 30,
-                                    backgroundImage: AssetImage(
-                                        _foundUsers[index]['profileImage']),
-                                  ),
-                                  SizedBox(width: 12.w),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Expanded(
-                                              child: Text(
-                                                _foundUsers[index]['name'],
-                                                style: TextStyle(
-                                                    color: ThemeColors.primary,
-                                                    fontWeight: FontWeight.w600,
-                                                    fontSize: 18.sp),
-                                              ),
-                                            ),
-                                            _buildStarRating(
-                                                _foundUsers[index]['rating']),
-                                          ],
-                                        ),
-                                        Row(
-                                          children: [
-                                            Expanded(
-                                              child: Text(
-                                                _foundUsers[index]['jobTitle'],
-                                                style: TextStyle(
-                                                    color: ThemeColors.primary,
-                                                    fontWeight: FontWeight.w500,
-                                                    fontSize: 13.sp),
-                                              ),
-                                            ),
-                                            Text(
-                                              _foundUsers[index]['price'],
+                      itemBuilder: (context, index) => GestureDetector(
+                        onTap: () {
+                          context.go('/expert_detail', extra: _foundUsers[index]);
+                        },
+                        child: Card(
+                          key: ValueKey(_foundUsers[index]["id"]),
+                          color: Color.fromARGB(255, 237, 240, 245),
+                          elevation: 0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 30,
+                                  backgroundImage: AssetImage(
+                                      _foundUsers[index]['profileImage']),
+                                ),
+                                SizedBox(width: 12.w),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Expanded(
+                                            child: Text(
+                                              _foundUsers[index]['name'],
                                               style: TextStyle(
-                                                  color: Colors.orange,
-                                                  fontWeight: FontWeight.w700,
-                                                  fontSize: 12.sp),
+                                                  color: ThemeColors.primary,
+                                                  fontWeight: FontWeight.w600,
+                                                  fontSize: 18.sp),
                                             ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
+                                          ),
+                                          _buildStarRating(
+                                              _foundUsers[index]['rating']),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Expanded(
+                                            child: Text(
+                                              _foundUsers[index]['jobTitle'],
+                                              style: TextStyle(
+                                                  color: ThemeColors.primary,
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 13.sp),
+                                            ),
+                                          ),
+                                          Text(
+                                            _foundUsers[index]['price'],
+                                            style: TextStyle(
+                                                color: Colors.orange,
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 12.sp),
+                                          ),
+                                        ],
+                                      )
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                          ))
+                          ),
+                        ),
+                      ),
+                    )
                   : const Text(
                       'No results found',
                       style: TextStyle(fontSize: 24),
