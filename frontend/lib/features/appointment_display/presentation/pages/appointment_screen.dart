@@ -1,6 +1,5 @@
 import 'package:expertease/core/colors/colors.dart';
 import 'package:expertease/features/Feed/presentation/widget/bottom_bar.dart';
-import 'package:expertease/features/appointment_display/presentation/pages/cancelled.dart';
 import 'package:expertease/features/appointment_display/presentation/pages/upcoming.dart';
 import 'package:expertease/features/appointment_display/presentation/widgets/custom_toggle.dart';
 import 'package:expertease/features/appointment_display/presentation/widgets/no_cancelled.dart';

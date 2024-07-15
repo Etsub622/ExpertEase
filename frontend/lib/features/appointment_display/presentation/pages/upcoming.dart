@@ -1,9 +1,8 @@
-import 'package:expertease/core/colors/colors.dart';
 import 'package:expertease/core/dummy_datas/dummy_feed.dart';
 import 'package:expertease/features/appointment_display/presentation/widgets/appointment_section.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class UpcomingAppointment extends StatefulWidget {
   const UpcomingAppointment({super.key});
