@@ -21,6 +21,8 @@ class AppPath {
   static const schedule = '/schedule_page';
   static const review = '/review';
   static const notification = '/notification';
+  static const splash = '/splash';
+  static const welcome = '/welcome';
+  static const expertSignUp = '/expertSignUp';
+  static const expertee = '/expertee';
 }
-
-
