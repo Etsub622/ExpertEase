@@ -9,7 +9,13 @@ import 'package:expertease/features/Splash_screens/presentation/pages/onboard3.d
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard4.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/splash_screen.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/welcome.dart';
+import 'package:expertease/features/appointment_display/presentation/pages/expert_profile_page.dart';
+import 'package:expertease/features/client_display/presentation/pages/client_profile.dart';
+import 'package:expertease/features/client_display/presentation/pages/expert_detail_page.dart';
+import 'package:expertease/features/client_display/presentation/pages/notification.dart';
+import 'package:expertease/features/client_display/presentation/pages/shecdule_page.dart';
 import 'package:expertease/features/expert_display/presentation/pages/experts.dart';
+import 'package:expertease/features/video_confrence/widget/rate_session.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -58,7 +64,7 @@ class AppRouter {
         builder: (BuildContext context, GoRouterState state) {
           return SplashScreen();
         }),
-         GoRoute(
+    GoRoute(
         path: AppPath.login,
         name: AppPath.login,
         builder: (BuildContext context, GoRouterState state) {
@@ -82,5 +88,47 @@ class AppRouter {
         builder: (BuildContext context, GoRouterState state) {
           return ExperteeSignUp();
         }),
+    GoRoute(
+      path: AppPath.expertProfile,
+      name: AppPath.expertProfile,
+      builder: (BuildContext context, GoRouterState state) {
+        return ExpertProfilePage();
+      },
+    ),
+    GoRoute(
+      path: AppPath.expertDetail,
+      name: AppPath.expertDetail,
+      builder: (BuildContext context, GoRouterState state) {
+        return ExpertDetailPage(expert: state.extra as Map<String, dynamic>);
+      },
+    ),
+    GoRoute(
+      path: AppPath.clientProfile,
+      name: AppPath.clientProfile,
+      builder: (BuildContext context, GoRouterState state) {
+        return ClientProfilePage();
+      },
+    ),
+    GoRoute(
+      path: AppPath.schedule,
+      name: AppPath.schedule,
+      builder: (BuildContext context, GoRouterState state) {
+        return SchedulePage();
+      },
+    ),
+    GoRoute(
+      path: AppPath.review,
+      name: AppPath.review,
+      builder: (BuildContext context, GoRouterState state) {
+        return RateSessionPage();
+      },
+    ),
+    GoRoute(
+      path: AppPath.notification,
+      name: AppPath.notification,
+      builder: (BuildContext context, GoRouterState state) {
+        return NotificationPage();
+      },
+    ),
   ]);
 }
