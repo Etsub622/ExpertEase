@@ -12,4 +12,8 @@ class AppPath {
   static const onboard3 = '/onboard3';
   static const onboard4 = '/onboard4';
   static const expertDisplay = '/expertDisplay';
+  static const splash = '/splash';
+  static const welcome = '/welcome';
+  static const expertSignUp = '/expertSignUp';
+  static const expertee = '/expertee';
 }

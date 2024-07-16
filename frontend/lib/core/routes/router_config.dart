@@ -1,16 +1,21 @@
 import 'package:expertease/core/routes/path.dart';
 import 'package:expertease/features/Feed/presentation/pages/feed_page.dart';
+import 'package:expertease/features/Splash_screens/presentation/pages/expert_sign_up.dart';
+import 'package:expertease/features/Splash_screens/presentation/pages/expertee_sign_up.dart';
+import 'package:expertease/features/Splash_screens/presentation/pages/login.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard1.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard2.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard3.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard4.dart';
+import 'package:expertease/features/Splash_screens/presentation/pages/splash_screen.dart';
+import 'package:expertease/features/Splash_screens/presentation/pages/welcome.dart';
 import 'package:expertease/features/expert_display/presentation/pages/experts.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final GoRouter router =
-      GoRouter(initialLocation: AppPath.home, routes: <GoRoute>[
+      GoRouter(initialLocation: AppPath.splash, routes: <GoRoute>[
     GoRoute(
         path: AppPath.home,
         name: AppPath.home,
@@ -41,11 +46,41 @@ class AppRouter {
         builder: (BuildContext context, GoRouterState state) {
           return onBoardFour();
         }),
-        GoRoute(
+    GoRoute(
         path: AppPath.expertDisplay,
         name: AppPath.expertDisplay,
         builder: (BuildContext context, GoRouterState state) {
           return ExpertDisplay();
+        }),
+    GoRoute(
+        path: AppPath.splash,
+        name: AppPath.splash,
+        builder: (BuildContext context, GoRouterState state) {
+          return SplashScreen();
+        }),
+         GoRoute(
+        path: AppPath.login,
+        name: AppPath.login,
+        builder: (BuildContext context, GoRouterState state) {
+          return LogIn();
+        }),
+    GoRoute(
+        path: AppPath.welcome,
+        name: AppPath.welcome,
+        builder: (BuildContext context, GoRouterState state) {
+          return WelcomeScreen();
+        }),
+    GoRoute(
+        path: AppPath.expertSignUp,
+        name: AppPath.expertSignUp,
+        builder: (BuildContext context, GoRouterState state) {
+          return ExpertSignUP();
+        }),
+    GoRoute(
+        path: AppPath.expertee,
+        name: AppPath.expertee,
+        builder: (BuildContext context, GoRouterState state) {
+          return ExperteeSignUp();
         }),
   ]);
 }
