@@ -4,8 +4,10 @@ import 'package:expertease/features/Splash_screens/presentation/pages/onboard1.d
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard2.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard3.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/onboard4.dart';
+import 'package:expertease/features/client_display/presentation/pages/notification.dart';
 import 'package:expertease/features/client_display/presentation/pages/shecdule_page.dart';
 import 'package:expertease/features/expert_display/presentation/pages/experts.dart';
+import 'package:expertease/features/video_confrence/widget/rate_session.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:expertease/features/appointment_display/presentation/pages/expert_profile_page.dart';
@@ -15,7 +17,7 @@ import 'package:expertease/features/client_display/presentation/pages/client_pro
 
 class AppRouter {
   static final GoRouter router = GoRouter(
-    initialLocation: AppPath.home,
+    initialLocation: AppPath.notification,
     routes: <GoRoute>[
       GoRoute(
         path: AppPath.home,
@@ -92,6 +94,21 @@ class AppRouter {
         name: AppPath.schedule,
         builder: (BuildContext context, GoRouterState state) {
           return SchedulePage();
+        },
+      ),
+
+      GoRoute(
+        path: AppPath.review,
+        name: AppPath.review,
+        builder: (BuildContext context, GoRouterState state) {
+          return RateSessionPage();
+        },
+      ),
+      GoRoute(
+        path: AppPath.notification,
+        name: AppPath.notification,
+        builder: (BuildContext context, GoRouterState state) {
+          return NotificationPage();
         },
       ),
     ],
