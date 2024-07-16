@@ -39,6 +39,7 @@ dependencies:
   responsive_sizer: ^3.3.0+1
   table_calendar: ^3.1.2
   flutter_riverpod: ^2.5.1
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:

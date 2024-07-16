@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class AppPath {
   static const home = '/';
   static const login = '/login';
@@ -17,6 +19,8 @@ class AppPath {
   static const expertDetail = '/expert_detail';
   static const clientProfile = '/client_profile';
   static const schedule = '/schedule_page';
+  static const review = '/review';
+  static const notification = '/notification';
 }
 
 

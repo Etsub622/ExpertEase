@@ -38,7 +38,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             .push(MaterialPageRoute(builder: ((context) => ExpertDisplay())));
         break;
       case 3:
-        context.go(AppPath.home);
+        context.go(AppPath.notification);
         break;
       case 4:
         Navigator.of(context)
