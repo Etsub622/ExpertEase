@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/onboarding1.png',
+            Image.asset('assets/images/logo1.jpg',
                 height: 190.h, width: 350.w),
             Text(
               'EXPERTEASE',

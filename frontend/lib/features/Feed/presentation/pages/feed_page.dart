@@ -7,6 +7,7 @@ import 'package:expertease/features/Feed/presentation/widget/search.dart';
 import 'package:expertease/features/client_display/presentation/widget/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class FeedPage extends StatefulWidget {
   const FeedPage({super.key});
@@ -76,11 +77,15 @@ class _FeedPageState extends State<FeedPage> {
                           borderRadius: BorderRadius.circular(44.w),
                           color: const Color.fromARGB(255, 217, 223, 228),
                         ),
-                        child: Icon(
-                          Icons.chat,
+                        child:GestureDetector(
+                          onTap: (){
+                            context.go("/chatbot");
+                          },
+                          child:  Icon(
+                          Icons.android,
                           color: ThemeColors.primary,
                         ),
-                      ),
+                      ),),
                       SizedBox(width: 10.w),
                       Container(
                         alignment: Alignment.center,

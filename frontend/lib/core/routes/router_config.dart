@@ -10,18 +10,20 @@ import 'package:expertease/features/Splash_screens/presentation/pages/onboard4.d
 import 'package:expertease/features/Splash_screens/presentation/pages/splash_screen.dart';
 import 'package:expertease/features/Splash_screens/presentation/pages/welcome.dart';
 import 'package:expertease/features/appointment_display/presentation/pages/expert_profile_page.dart';
+import 'package:expertease/features/chat_bot/pages/chat_bot_page.dart';
 import 'package:expertease/features/client_display/presentation/pages/client_profile.dart';
 import 'package:expertease/features/client_display/presentation/pages/expert_detail_page.dart';
 import 'package:expertease/features/client_display/presentation/pages/notification.dart';
 import 'package:expertease/features/client_display/presentation/pages/shecdule_page.dart';
 import 'package:expertease/features/expert_display/presentation/pages/experts.dart';
+import 'package:expertease/features/messaging/presentation/pages/chat_list.dart';
 import 'package:expertease/features/video_confrence/widget/rate_session.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final GoRouter router =
-      GoRouter(initialLocation: AppPath.splash, routes: <GoRoute>[
+      GoRouter(initialLocation: AppPath.onboard1, routes: <GoRoute>[
     GoRoute(
         path: AppPath.home,
         name: AppPath.home,
@@ -128,6 +130,21 @@ class AppRouter {
       name: AppPath.notification,
       builder: (BuildContext context, GoRouterState state) {
         return NotificationPage();
+      },
+    ),
+
+    GoRoute(
+      path: AppPath.chatbot,
+      name: AppPath.chatbot,
+      builder: (BuildContext context, GoRouterState state) {
+        return ChatBotPage();
+      },
+    ),
+    GoRoute(
+      path: AppPath.chat_list,
+      name: AppPath.chat_list,
+      builder: (BuildContext context, GoRouterState state) {
+        return ChatListPage();
       },
     ),
   ]);

@@ -40,7 +40,7 @@ class CustomDrawer extends StatelessWidget {
                     title: Text('Home',
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     onTap: () {
-                      context.go('/feed_page');
+                      context.go('/');
                     },
                   ),
                   SizedBox(height: 20),

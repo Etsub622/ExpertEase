@@ -96,6 +96,11 @@ class _AppointmentSectionState extends State<AppointmentSection> {
                   Column(
                     children: [
                       CustomButton(
+                        text: 'Join now',
+                        bgColor: ThemeColors.buttonColor,
+                      ),
+                      SizedBox(height: 8.h),
+                      CustomButton(
                         text: 'Reschedule',
                         bgColor: ThemeColors.buttonColor,
                       ),

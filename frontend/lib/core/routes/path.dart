@@ -25,4 +25,6 @@ class AppPath {
   static const welcome = '/welcome';
   static const expertSignUp = '/expertSignUp';
   static const expertee = '/expertee';
+  static const chatbot = '/chatbot';
+  static const chat_list = '/chat_list';
 }

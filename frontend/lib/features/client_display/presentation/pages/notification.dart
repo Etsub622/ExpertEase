@@ -67,7 +67,7 @@ class NotificationPage extends StatelessWidget {
         ),
         leading: GestureDetector(
           onTap: () {
-            context.pop();
+            context.go("/");
           },
           child: Icon(Icons.arrow_back, color: Colors.white),
         ),
