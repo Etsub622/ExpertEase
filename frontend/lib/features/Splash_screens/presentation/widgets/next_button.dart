@@ -22,7 +22,7 @@ class NextButton extends StatelessWidget {
             onPressed: onTap,
             style: ElevatedButton.styleFrom(
               backgroundColor: ThemeColors.primary,
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 25),
+              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
               ),
