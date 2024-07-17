@@ -18,5 +18,8 @@ ExpertEase is an innovative online platform designed to connect Users with quali
 
 ![ex15](https://github.com/user-attachments/assets/e10de0c7-0fa2-41c2-9d42-3a9681c22f03) ![ex18](https://github.com/user-attachments/assets/6dd98f8f-28e3-4fec-b6ab-e7796a531f56)  ![ex16](https://github.com/user-attachments/assets/c6a478c1-80ed-4ecd-a879-08dfa34d0bcd)
 
-# Chat
-![ex17](https://github.com/user-attachments/assets/c5d128d5-c04a-43a8-9ab6-5c70ec1b065d)  
+# Chat and AI Chatbot
+![ex17](https://github.com/user-attachments/assets/c5d128d5-c04a-43a8-9ab6-5c70ec1b065d)  ![exp19](https://github.com/user-attachments/assets/39be3a28-6126-46f4-91e0-8aa22816b5f6)
+
+# Appointment
+![exp20](https://github.com/user-attachments/assets/1b09b8e8-b0c2-4110-a64b-96a587ad6eb3)
