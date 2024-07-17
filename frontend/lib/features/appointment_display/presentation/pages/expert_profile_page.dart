@@ -1,9 +1,11 @@
 import 'package:expertease/core/dummy_datas/dummy_profile.dart';
 import 'package:expertease/core/dummy_datas/dummy_time_slots.dart';
+import 'package:expertease/core/routes/path.dart';
 import 'package:expertease/features/appointment_display/presentation/widgets/review_card.dart';
 import 'package:expertease/features/client_display/presentation/widget/time_slot_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class ExpertProfilePage extends StatefulWidget {
@@ -20,7 +22,9 @@ class _ExpertProfilePageState extends State<ExpertProfilePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Profile',style: TextStyle(color: Color.fromARGB(255, 92, 149, 202)),),
-        leading: Icon(Icons.arrow_back,color: Color.fromARGB(255, 92, 149, 202) ),
+        leading: GestureDetector(
+          onTap: (){context.go(AppPath.home);},
+          child: Icon(Icons.arrow_back,color: Color.fromARGB(255, 92, 149, 202) )),
         actions: [
           Icon(Icons.edit, color: Color.fromARGB(255, 44, 175, 198)),
         ],
@@ -52,10 +56,10 @@ class _ExpertProfilePageState extends State<ExpertProfilePage> {
                   ),
                   Column(
                     children: [
-                      Text(profile.name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
-                      Text(profile.profession, style: TextStyle(fontSize: 20, color: Colors.white)),
+                      Text(profile.name, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+                      Text(profile.profession, style: TextStyle(fontSize: 18, color: Colors.white)),
                       SizedBox(height: 10),
-                      Text('Fee: \$${profile.fee}/hr  Rating: ${profile.rating}⭐', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+                      Text('Fee: \$${profile.fee}/hr  Rating: ${profile.rating}⭐', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
                     ],
                   ),
                 ],

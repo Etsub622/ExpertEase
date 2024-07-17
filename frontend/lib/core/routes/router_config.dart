@@ -17,13 +17,14 @@ import 'package:expertease/features/client_display/presentation/pages/notificati
 import 'package:expertease/features/client_display/presentation/pages/shecdule_page.dart';
 import 'package:expertease/features/expert_display/presentation/pages/experts.dart';
 import 'package:expertease/features/messaging/presentation/pages/chat_list.dart';
+import 'package:expertease/features/payment/presentation/pages/payment_screen.dart';
 import 'package:expertease/features/video_confrence/widget/rate_session.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static final GoRouter router =
-      GoRouter(initialLocation: AppPath.onboard1, routes: <GoRoute>[
+      GoRouter(initialLocation: AppPath.splash, routes: <GoRoute>[
     GoRoute(
         path: AppPath.home,
         name: AppPath.home,
@@ -145,6 +146,15 @@ class AppRouter {
       name: AppPath.chat_list,
       builder: (BuildContext context, GoRouterState state) {
         return ChatListPage();
+        
+      },
+    ),
+      GoRoute(
+      path: AppPath.payment,
+      name: AppPath.payment,
+      builder: (BuildContext context, GoRouterState state) {
+        return PaymentScreen();
+        
       },
     ),
   ]);

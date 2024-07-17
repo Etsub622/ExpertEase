@@ -1,3 +1,4 @@
+import 'package:expertease/core/routes/path.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 class CustomDrawer extends StatelessWidget {
@@ -24,7 +25,7 @@ class CustomDrawer extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 8),
-                  Text('Etsub Taye',
+                  Text('Heran Eshetu',
                       style: TextStyle(color: Colors.white, fontSize: 20)),
                   SizedBox(height: 16),
                   Divider(),
@@ -49,7 +50,7 @@ class CustomDrawer extends StatelessWidget {
                     title: Text('Profile',
                         style: TextStyle(color: Colors.white, fontSize: 18)),
                     onTap: () {
-                      context.go('/client_profile');
+                      context.go(AppPath.expertProfile);
                     },
                   ),
                   SizedBox(height: 20),
@@ -89,7 +90,9 @@ class CustomDrawer extends StatelessWidget {
               contentPadding: EdgeInsets.symmetric(vertical: 20 ,horizontal:40),
               leading: Icon(Icons.logout, color: Colors.red),
               title: Text('Log Out', style: TextStyle(color: Colors.red)),
-              onTap: () {},
+              onTap: () {
+                context.go(AppPath.welcome);
+              },
             ),
           ],
         ),

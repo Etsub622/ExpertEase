@@ -1,4 +1,5 @@
 import 'package:expertease/core/dummy_datas/dummy_time_slots.dart';
+import 'package:expertease/core/routes/path.dart';
 import 'package:expertease/features/client_display/presentation/widget/time_slot_card.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -103,7 +104,7 @@ class _SchedulePageState extends State<SchedulePage> {
               ),
               SizedBox(height: 16),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: (){context.go(AppPath.payment);},
                 child: Text('Schedule', style: TextStyle(color: Colors.white)),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromARGB(255, 92, 149, 202), // Button color

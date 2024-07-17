@@ -1,9 +1,14 @@
+import 'package:expertease/core/routes/path.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ChatBotPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(leading: GestureDetector(
+                    onTap: (){context.go(AppPath.home);},
+                    child: Icon(Icons.arrow_back)),),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -12,6 +17,7 @@ class ChatBotPage extends StatelessWidget {
             children: [
               Column(
                 children: [
+                  
                   SizedBox(height: 50),
                   Image.asset(
                     'assets/images/logo1.jpg', // Replace with your image asset path

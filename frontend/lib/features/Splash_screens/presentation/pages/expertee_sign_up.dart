@@ -44,7 +44,7 @@ class _ExperteeSignUpState extends State<ExperteeSignUp> {
               GestureDetector(
                 onTap: () => context.go(AppPath.home),
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 20.0, top: 10),
+                  padding: const EdgeInsets.only(right: 20.0, top: 50),
                   child: Align(
                       alignment: Alignment.topRight,
                       child: Text(

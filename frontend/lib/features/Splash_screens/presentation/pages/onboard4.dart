@@ -46,7 +46,7 @@ class onBoardFour extends StatelessWidget {
                 text: "Let's Get Started",
                 widths: double.infinity,
                 onTap: () {
-                  (context.go(AppPath.splash));
+                  (context.go(AppPath.welcome));
                 },
               ),
             ),

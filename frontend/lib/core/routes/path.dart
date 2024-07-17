@@ -27,4 +27,5 @@ class AppPath {
   static const expertee = '/expertee';
   static const chatbot = '/chatbot';
   static const chat_list = '/chat_list';
+  static const payment = '/payment';
 }

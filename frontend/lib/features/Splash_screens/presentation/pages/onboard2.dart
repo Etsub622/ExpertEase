@@ -46,7 +46,7 @@ class OnBoardTwo extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    (context.go(AppPath.splash));
+                    (context.go(AppPath.welcome));
                   },
                   child: Text(
                     'Skip',

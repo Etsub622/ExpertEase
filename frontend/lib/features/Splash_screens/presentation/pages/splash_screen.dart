@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Future.delayed(Duration(seconds: 2), () {
-        context.go(AppPath.welcome);
+        context.go(AppPath.onboard1);
       });
     });
   }

@@ -1,3 +1,4 @@
+import 'package:expertease/core/routes/path.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -15,7 +16,7 @@ class ExpertDetailPage extends StatelessWidget {
           builder: (BuildContext context) {
             return GestureDetector(
               onTap: () {
-                context.go("/feed_page");
+                context.go(AppPath.expertDisplay);
               },
               child: Icon(Icons.arrow_back, color: Color.fromARGB(255, 92, 149, 202)),
             );
@@ -69,7 +70,9 @@ class ExpertDetailPage extends StatelessWidget {
                 children: [
                   SizedBox(height: 20),
                   Text('Bio', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 92, 149, 202))),
+                  
                   SizedBox(height: 20),
+                  Text('${expert['bio']}'),
                   SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
