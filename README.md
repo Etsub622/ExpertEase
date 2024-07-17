@@ -7,8 +7,12 @@ ExpertEase is an innovative online platform designed to connect Users with quali
 ![ex3](https://github.com/user-attachments/assets/58922584-fd2d-4685-9a9a-01eb88ec402e) ![ex4](https://github.com/user-attachments/assets/0210bed1-acfb-46c8-be11-7cdc5f84e401) ![ex5](https://github.com/user-attachments/assets/6d62eebd-c0e5-4887-a0e8-76f2cdc1de4b)      ![ex6](https://github.com/user-attachments/assets/b5ad7d1d-5cdc-424d-bd6f-724d767c8a8b)   ![ex7](https://github.com/user-attachments/assets/74eba70c-38de-4fc3-aa2a-f6ddd828b8bd)  ![ex8](https://github.com/user-attachments/assets/2cb9d632-7122-4127-885f-4d720806d2ba) 
 
 # Home Page
-![ex9](https://github.com/user-attachments/assets/88683c40-4008-418e-80e4-398ba4433b7a)
+![ex9](https://github.com/user-attachments/assets/88683c40-4008-418e-80e4-398ba4433b7a)   ![ex10](https://github.com/user-attachments/assets/059a5963-8c1c-4144-b746-5fef1e8ae208)  ![ex11](https://github.com/user-attachments/assets/744fe6a6-4d4b-45fd-93d1-6f771bb51763)
 
+
+# Profile page
+
+![ex12](https://github.com/user-attachments/assets/6cf5d895-6f64-4c81-b302-b11f93f03611)
 
 
 
