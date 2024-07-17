@@ -13,7 +13,10 @@ Convenience: Access consultations on your schedule, wherever you are.
 Comprehensive Support: Enhance both personal and professional aspects of your life.
 
 
-ExpertEase: Your gateway to expert advice and community support
+# ExpertEase: Your gateway to expert advice and community support
+
+
+
 
 # onboardig and Account Creation Pages screens
 
