@@ -36,5 +36,6 @@ ExpertEase: Your gateway to expert advice and community support
 ![ex17](https://github.com/user-attachments/assets/c5d128d5-c04a-43a8-9ab6-5c70ec1b065d)  ![exp19](https://github.com/user-attachments/assets/39be3a28-6126-46f4-91e0-8aa22816b5f6)
 
 # Appointment
-![exp20](https://github.com/user-attachments/assets/1b09b8e8-b0c2-4110-a64b-96a587ad6eb3)  ![exp21](https://github.com/user-attachments/assets/f7c18691-84fd-4d5c-91f7-1c27e6b9d5ec)
+![exp20](https://github.com/user-attachments/assets/1b09b8e8-b0c2-4110-a64b-96a587ad6eb3)  ![exp21](https://github.com/user-attachments/assets/29e26dd1-a0fe-44b2-b068-06eada129c89)
+
 
