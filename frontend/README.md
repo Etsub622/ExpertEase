@@ -1,16 +1,4 @@
-# frontend
+              ExpertEase 
+ExpertEase is an innovative online platform designed to connect Users with qualified experts across various fields such as mental health, business consulting, and legal advice. Our platform offers a comprehensive and accessible support system, enabling users to receive professional guidance and advice tailored to their needs. This facilitates both personal and professional growth by providing convenient access to expert Actcvate Windows consultations from the comfort of one's home.
 
-A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
