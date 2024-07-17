@@ -5,14 +5,11 @@ ExpertEase is your online platform connecting you directly with qualified expert
 # Why Expertease
 
 Direct Access: Connect instantly with vetted experts.
-
 Personalized Guidance: Receive advice tailored to your specific needs.
-
 Convenience: Access consultations on your schedule, wherever you are.
-
 Comprehensive Support: Enhance both personal and professional aspects of your life.
 
-
+ExpertEase: Your gateway to expert advice and community support
 
 # onboardig and Account Creation Pages screens
 
@@ -35,4 +32,5 @@ Comprehensive Support: Enhance both personal and professional aspects of your li
 ![ex17](https://github.com/user-attachments/assets/c5d128d5-c04a-43a8-9ab6-5c70ec1b065d)  ![exp19](https://github.com/user-attachments/assets/39be3a28-6126-46f4-91e0-8aa22816b5f6)
 
 # Appointment
-![exp20](https://github.com/user-attachments/assets/1b09b8e8-b0c2-4110-a64b-96a587ad6eb3)
+![exp20](https://github.com/user-attachments/assets/1b09b8e8-b0c2-4110-a64b-96a587ad6eb3)  ![exp21](https://github.com/user-attachments/assets/f7c18691-84fd-4d5c-91f7-1c27e6b9d5ec)
+
