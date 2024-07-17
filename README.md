@@ -4,5 +4,5 @@ ExpertEase is an innovative online platform designed to connect Users with quali
 
 #onboardig and Account Creation Pages screanshots
 
-![image](https://github.com/user-attachments/assets/0a279b12-3054-42dc-8d6c-b6377c2026c7) ![Uploading image.png…]()
+
 
