@@ -5,9 +5,13 @@ ExpertEase is your online platform connecting you directly with qualified expert
 # Why Expertease
 
 Direct Access: Connect instantly with vetted experts.
+
 Personalized Guidance: Receive advice tailored to your specific needs.
+
 Convenience: Access consultations on your schedule, wherever you are.
+
 Comprehensive Support: Enhance both personal and professional aspects of your life.
+
 
 
 # onboardig and Account Creation Pages screens
